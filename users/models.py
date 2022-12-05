@@ -13,7 +13,7 @@ class UserProfile(models.Model):
     city = models.CharField(verbose_name="City", max_length=100, null=True, blank=True)
     county = models.CharField(verbose_name="County", max_length=100, null=True, blank=True)
     zip_code = models.CharField(verbose_name="Zip Code", max_length=10, null=True, blank=True)
-    country = models.CharField(verbose_name="Country", max_length=100, null=True, blank=True)
+    country = models.CharField(verbose_name="Country", max_length=40, null=True, blank=True)
 
     longitude = models.CharField(verbose_name="Longitude", max_length=50, null=True)
     latitude = models.CharField(verbose_name="Latitude", max_length=50, null=True)
