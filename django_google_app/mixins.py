@@ -95,8 +95,16 @@ def Directions(*args, **kwargs):
                 'distance': routes[route]["distance"]["text"],
                 'duration': routes[route]["duration"]["text"],
 
-                'steps': []
-            }
+                'steps': [
+					[
+						s["distance"]["text"],
+						s["duration"]["text"],
+						s["html_instructions"],
+
+					]
+					for s in routes[route]["steps"]]
+				}
+            route_list.append(route_step)
 
         return {
             'origin': origin,
