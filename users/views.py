@@ -31,7 +31,7 @@ class AccountView(TemplateView):
     def dispatch(self, *args, **kwargs):
         return super().dispatch(*args, **kwargs)
 
-def ProfileView(request):
+def profile_view(request):
     user = request.user
     up = user.userprofile
 
